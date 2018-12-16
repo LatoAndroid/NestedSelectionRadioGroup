@@ -1,4 +1,4 @@
-# NestedSelectionVideoGroup
+# NestedSelectionRadioGroup
 ## 可无限嵌套选择的radiogroup，radiogroup内部的控件选择状态完全跟随外部一起变化，可嵌套viewgroup
 
 ### 项目来源
