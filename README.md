@@ -7,13 +7,13 @@
 这个库的很大一部分代码来自RadioGroup、RadioButton和CompoundLayout，在他的基础上进行了一些修改与适配
 
 ### 项目效果
-![Image preview](https://github.com/LatoAndroid/NestedSelectionVideoGroup/blob/master/pic/1d277826aec822b4f818a235d78f91c.jpg)
-![Image preview2](https://github.com/LatoAndroid/NestedSelectionVideoGroup/blob/master/pic/716fd4d620bf6a1808f93e6fa655d95.jpg)
+![Image preview](https://github.com/LatoAndroid/NestedSelectionVideoGroup/blob/master/pic/2cb77acf3c89dce000c35297b3c391f.png)
+![Image preview2](https://github.com/LatoAndroid/NestedSelectionVideoGroup/blob/master/pic/4082d6c1899b08595851e302e565411.png)
 
 ### 项目用法
 1.NestedRadioGroup继承LinearLayout，必须作为整体的父控件
 
-2.如果子控件需要被选中，放入NestedRadioLayout中就可以了，不需要不用处理
+2.如果子控件需要被选中，放入NestedRadioLayout中就可以了，其他不用处理
 
 3.其他用法和radiogroup类似，每个NestedRadioLayout都有自己的setOnCheckedChangeListener方法
 
@@ -25,178 +25,48 @@
         android:id="@+id/nestedGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:orientation="vertical"
-        android:paddingTop="@dimen/spacing_87">
+        >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/spacing_30"
-            android:text="按时间"
-            android:textColor="@color/tc_3f3f3f"
-            android:textSize="@dimen/font_48"
-            android:textStyle="bold" />
-        <LinearLayout
+            android:text="不进行选择的text头部"/>
+
+        <!--extends Relativelayout-->
+        <com.kyle.radiogrouplib.NestedRadioLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/spacing_30"
-            android:layout_marginRight="@dimen/spacing_30"
-            android:layout_marginTop="@dimen/spacing_57"
-            android:orientation="horizontal">
-            <com.kyle.radiogrouplib.NestedRadioLayout
-                android:id="@+id/rl_start_time"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dimen_120"
-                android:layout_weight="1"
-                android:background="@drawable/selector_solid_f5f5f9_corner_1dp_solod_ebf1ff_corner_1dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+            android:layout_height="50dp"
+            android:background="@drawable/selector_solid_f5f5f9_corner_1dp_solod_ebf1ff_corner_1dp">
 
-                <TextView
-                    android:id="@+id/tv_start_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:drawableLeft="@drawable/selector_pop_time_calendar"
-                    android:drawablePadding="@dimen/spacing_30"
-                    android:duplicateParentState="true"
-                    android:gravity="center_vertical"
-                    android:text="2000-01-01"
-                    android:textColor="@color/selector_47aefe_3f3f3f"
-                    android:textSize="@dimen/font_42" />
-
-            </com.kyle.radiogrouplib.NestedRadioLayout>
             <TextView
-                android:layout_width="@dimen/dimen_135"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:gravity="center"
-                android:text="~"
-                android:textColor="@color/tc_3f3f3f"
-                android:textSize="@dimen/font_42" />
-            <com.kyle.radiogrouplib.NestedRadioLayout
-                android:id="@+id/rl_end_time"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dimen_120"
-                android:layout_weight="1"
-                android:background="@drawable/selector_solid_f5f5f9_corner_1dp_solod_ebf1ff_corner_1dp"
-                android:duplicateParentState="true"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_end_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:drawableLeft="@drawable/selector_pop_time_calendar"
-                    android:drawablePadding="@dimen/spacing_30"
-                    android:gravity="center_vertical"
-                    android:text="2000-01-01"
-                    android:textColor="@color/selector_47aefe_3f3f3f"
-                    android:textSize="@dimen/font_42" />
-
-
-            </com.kyle.radiogrouplib.NestedRadioLayout>
-
-        </LinearLayout>
-
+                android:layout_centerVertical="true"
+                android:text="test"
+                android:textColor="@color/selector_47aefe_3f3f3f"/>
+        </com.kyle.radiogrouplib.NestedRadioLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/spacing_30"
-            android:layout_marginRight="@dimen/spacing_30"
-            android:layout_marginTop="@dimen/spacing_87"
-            android:duplicateParentState="true"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <com.kyle.radiogrouplib.NestedRadioLayout
-
-                android:id="@+id/rl_week"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dimen_120"
-                android:layout_weight="1"
-                android:background="@drawable/selector_solid_f5f5f9_corner_1dp_solod_ebf1ff_corner_1dp"
-                android:orientation="horizontal">
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/selector_solid_f5f5f9_corner_1dp_solod_ebf1ff_corner_1dp">
 
                 <TextView
-                    android:id="@+id/tv_week"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:gravity="center_vertical"
-                    android:text="近一周"
-                    android:textColor="@color/selector_47aefe_3f3f3f"
-                    android:textSize="@dimen/font_42" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:background="@drawable/selector_pop_type" />
-
+                    android:layout_centerVertical="true"
+                    android:text="test"
+                    android:textColor="@color/selector_47aefe_3f3f3f"/>
             </com.kyle.radiogrouplib.NestedRadioLayout>
-
-            <com.kyle.radiogrouplib.NestedRadioLayout
-                android:id="@+id/rl_month"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dimen_120"
-                android:layout_marginLeft="@dimen/spacing_30"
-                android:layout_weight="1"
-                android:background="@drawable/selector_solid_f5f5f9_corner_1dp_solod_ebf1ff_corner_1dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_month"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:gravity="center_vertical"
-                    android:text="近一月"
-                    android:textColor="@color/selector_47aefe_3f3f3f"
-                    android:textSize="@dimen/font_42" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:background="@drawable/selector_pop_type" />
-            </com.kyle.radiogrouplib.NestedRadioLayout>
-
-            <com.kyle.radiogrouplib.NestedRadioLayout
-                android:id="@+id/rl_three_month"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dimen_120"
-                android:layout_marginLeft="@dimen/spacing_30"
-                android:layout_weight="1"
-                android:background="@drawable/selector_solid_f5f5f9_corner_1dp_solod_ebf1ff_corner_1dp"
-                android:duplicateParentState="true"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_three_month"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:gravity="center_vertical"
-                    android:text="近三月"
-                    android:textColor="@color/selector_47aefe_3f3f3f"
-                    android:textSize="@dimen/font_42" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:background="@drawable/selector_pop_type" />
-
-            </com.kyle.radiogrouplib.NestedRadioLayout>
-
         </LinearLayout>
 
-    </com.kyle.radiogrouplib.NestedRadioGroup>
-```
+    </com.kyle.radiogrouplib.NestedRadioGroup>```
 
 
 如果需要选择效果，需要写带selected的drawble文件
