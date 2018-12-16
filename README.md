@@ -66,7 +66,9 @@
             </com.kyle.radiogrouplib.NestedRadioLayout>
         </LinearLayout>
 
-    </com.kyle.radiogrouplib.NestedRadioGroup>```
+    </com.kyle.radiogrouplib.NestedRadioGroup>
+
+```
 
 
 如果需要选择效果，需要写带selected的drawble文件
