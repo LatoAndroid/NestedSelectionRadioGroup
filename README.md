@@ -4,9 +4,13 @@
 ### 项目来源
 之前在做一个需求的时候，产品经理要求在不同的列，不同的行的一些控件全部联动单选，而且每一个控件的样式都不一样，另外，在这些控件内部，子控件也要跟随变化。所以就有了这个库
 
-这个库的大部分代码来自RadioGroup和RadioButton，在他的基础上进行了一些修改与适配
+这个库的很大一部分代码来自RadioGroup、RadioButton和CompoundLayout，在他的基础上进行了一些修改与适配
 
-## 项目用法
+### 项目效果
+![Image preview](https://github.com/LatoAndroid/NestedSelectionVideoGroup/blob/master/pic/1d277826aec822b4f818a235d78f91c.jpg)
+![Image preview2](https://github.com/LatoAndroid/NestedSelectionVideoGroup/blob/master/pic/716fd4d620bf6a1808f93e6fa655d95.jpg)
+
+### 项目用法
 1.NestedRadioGroup继承LinearLayout，必须作为整体的父控件
 
 2.如果子控件需要被选中，放入NestedRadioLayout中就可以了，不需要不用处理
