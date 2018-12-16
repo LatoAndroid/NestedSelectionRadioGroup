@@ -17,7 +17,7 @@
 
 3.其他用法和radiogroup类似，每个NestedRadioLayout都有自己的setOnCheckedChangeListener方法
 
-4.暂未上传jcenter，目前只能复制过去使用，待续
+4.bintray正在审核，待续
 
 在布局中
 ```

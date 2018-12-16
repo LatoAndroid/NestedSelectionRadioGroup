@@ -150,7 +150,6 @@ public class NestedRadioGroup extends LinearLayout {
      * Upon empty selection, the returned value is -1.</p>
      *
      * @return the unique id of the selected radio button in this group
-     * @attr ref android.R.styleable#RadioGroup_checkedButton
      * @see #check(int)
      * @see #clearCheck()
      */
