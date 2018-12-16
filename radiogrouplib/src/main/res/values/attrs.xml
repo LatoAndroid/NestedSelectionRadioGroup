@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NestedRadioGroup">
+        <attr name="checkedButton" format="reference" />
+        <attr name="orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="BaseRadioLayout">
+        <attr name="checked" format="boolean" />
+    </declare-styleable>
+</resources>
