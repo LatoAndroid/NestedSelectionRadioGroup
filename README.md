@@ -1,5 +1,5 @@
 # NestedSelectionRadioGroup
-## 可无限嵌套选择的radiogroup，radiogroup内部的控件选择状态完全跟随外部一起变化，可嵌套viewgroup
+## 可无限嵌套选择的radiogroup，radiogroup内部的控件选择状态完全跟随外部一起变化，可嵌套viewgroup，可多行单选
 
 ### 项目来源
 之前在做一个需求的时候，产品经理要求在不同的列，不同的行的一些控件全部联动单选，而且每一个控件的样式都不一样，另外，在这些控件内部，子控件也要跟随变化。所以就有了这个库
