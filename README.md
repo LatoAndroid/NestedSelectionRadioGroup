@@ -19,7 +19,11 @@
 
 3.其他用法和radiogroup类似，每个NestedRadioLayout都有自己的setOnCheckedChangeListener方法
 
-4.bintray正在审核，待续
+
+引入：
+```
+    compile 'com.kyle.nestedradiogrouplib:radiogrouplib:1.0.1'
+```
 
 在布局中
 ```
