@@ -1,16 +1,16 @@
 # NestedSelectionRadioGroup
-## 可无限嵌套选择的radiogroup，radiogroup内部的控件选择状态完全跟随外部一起变化，可嵌套viewgroup，可多行单选
+## 可无限嵌套选择的RadioGroup，RadioGroup内部的控件选择状态完全跟随外部一起变化，可嵌套ViewGroup，可多行单选
 
 ### 项目来源
 之前在做一个需求的时候，产品经理要求在不同的列，不同的行的一些控件全部联动单选，而且每一个控件的样式都不一样，另外，在这些控件内部，子控件也要跟随变化。所以就有了这个库
 
-网上有很多类似的文章，但我看了几篇和几个github分享后，一是感觉不够全面（无法满足所有需求），二是引入的radiogroup太老，后面懒得找了就自己实现了
+网上有很多类似的文章，但我看了几篇和几个github分享后，一是感觉不够全面（无法满足所有需求），二是引入的RadioGroup太老，后面懒得找了就自己实现了
 
 这个库的很大一部分代码来自RadioGroup、RadioButton和CompoundLayout，但是他们要不就是无法嵌套，要不就无法多行单选，所以在他的基础上进行了一些修改与适配
 
 ### 项目效果
-![Image preview](https://github.com/LatoAndroid/NestedSelectionVideoGroup/blob/master/pic/2cb77acf3c89dce000c35297b3c391f.png)
-![Image preview2](https://github.com/LatoAndroid/NestedSelectionVideoGroup/blob/master/pic/4082d6c1899b08595851e302e565411.png)
+![Image preview](https://raw.githubusercontent.com/LatoAndroid/NestedSelectionRadioGroup/master/pic/4082d6c1899b08595851e302e565411.png)
+![Image preview2](https://raw.githubusercontent.com/LatoAndroid/NestedSelectionRadioGroup/master/pic/2cb77acf3c89dce000c35297b3c391f.png)
 
 ### 项目用法
 1.NestedRadioGroup继承LinearLayout，必须作为整体的父控件
