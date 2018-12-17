@@ -4,7 +4,7 @@
 ### 项目来源
 之前在做一个需求的时候，产品经理要求在不同的列，不同的行的一些控件全部联动单选，而且每一个控件的样式都不一样，另外，在这些控件内部，子控件也要跟随变化。所以就有了这个库
 
-这个库的很大一部分代码来自RadioGroup、RadioButton和CompoundLayout，在他的基础上进行了一些修改与适配
+这个库的很大一部分代码来自RadioGroup、RadioButton和CompoundLayout，但是他们要不就是无法嵌套，要不就无法多行单选，所以在他的基础上进行了一些修改与适配
 
 ### 项目效果
 ![Image preview](https://github.com/LatoAndroid/NestedSelectionVideoGroup/blob/master/pic/2cb77acf3c89dce000c35297b3c391f.png)
@@ -113,5 +113,7 @@ private void bindListener(final NestedRadioLayout compoundLayout) {
         });
     }
 ```
+> 我的简书：https://www.jianshu.com/u/bb187b559365
+> 我的掘金：https://juejin.im/user/58cd4b02128fe1006c8e8b81/posts
 > 主要思路来自：https://github.com/Jaouan/CompoundLayout
 
