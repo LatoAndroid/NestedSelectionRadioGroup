@@ -72,7 +72,7 @@
             </com.kyle.radiogrouplib.NestedRadioLayout>
         </LinearLayout>
 
-    </com.kyle.radiogrouplib.NestedRadioGroup>
+</com.kyle.radiogrouplib.NestedRadioGroup>
 
 ```
 
