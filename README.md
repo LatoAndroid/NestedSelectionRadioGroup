@@ -114,6 +114,8 @@ private void bindListener(final NestedRadioLayout compoundLayout) {
     }
 ```
 > 我的简书：https://www.jianshu.com/u/bb187b559365
+
 > 我的掘金：https://juejin.im/user/58cd4b02128fe1006c8e8b81/posts
+
 > 主要思路来自：https://github.com/Jaouan/CompoundLayout
 
