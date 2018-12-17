@@ -130,7 +130,8 @@ private void bindListener(final NestedRadioLayout compoundLayout) {
 
 > 我的github：https://github.com/LatoAndroid
 
-> 主要思路来自：https://github.com/Jaouan/CompoundLayout以及https://github.com/fodroid/XRadioGroup
+> 主要思路来自：https://github.com/Jaouan/CompoundLayout
+> https://github.com/fodroid/XRadioGroup
 
 欢迎star~
 
