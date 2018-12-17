@@ -16,7 +16,10 @@ import android.view.SoundEffectConstants;
 import android.view.View;
 import android.view.ViewDebug;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.Checkable;
+import android.widget.CheckedTextView;
+import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 
 /**
@@ -51,6 +54,7 @@ public class BaseRadioLayout extends RelativeLayout implements Checkable {
      * Broadcasting state to avoid infinite recursions if setChecked() is called from a listener
      */
     private boolean mBroadcasting;
+    private boolean mIsInit;//is init
 
     public BaseRadioLayout(Context context) {
         super(context);
@@ -82,6 +86,10 @@ public class BaseRadioLayout extends RelativeLayout implements Checkable {
      * @param defStyleRes  Def style ressource.
      */
     private void initialize(final Context context, final AttributeSet attrs, final int defStyleAttr, final int defStyleRes) {
+        mIsInit = true;
+        // - Set clickable.
+        setClickable(true);
+
         // - Initialize from XML attributes.
         if (attrs != null) {
             final TypedArray styleAttributes = context.obtainStyledAttributes(
@@ -92,8 +100,9 @@ public class BaseRadioLayout extends RelativeLayout implements Checkable {
             styleAttributes.recycle();
         }
 
-        // - Set clickable.
-        setClickable(true);
+        mIsInit =false;
+
+
     }
 
     @Override
@@ -112,7 +121,7 @@ public class BaseRadioLayout extends RelativeLayout implements Checkable {
 
     @Override
     public void setChecked(final boolean checked) {
-        if (mChecked != checked) {
+        if (mChecked != checked && !mIsInit) {
             mChecked = checked;
             refreshDrawableState();
 
@@ -133,13 +142,28 @@ public class BaseRadioLayout extends RelativeLayout implements Checkable {
 
 
 
-            setUpChildCheckStatus(this,mChecked);
 
+            setUpChildCheckStatus(this,mChecked);
         }
+
+
+    }
+
+    @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
+        //init checkable view
+        setUpChildCheckStatus(this,mChecked);
     }
 
     private void setUpChildCheckStatus(View view, boolean checked) {
         view.setSelected(checked);
+        if (view instanceof Checkable &&  !(view instanceof BaseRadioLayout)){
+            ((Checkable) view).setChecked(checked);
+            view.setFocusable(false);
+            view.setClickable(false);
+            view.setFocusableInTouchMode(false);
+        }
         if (view instanceof ViewGroup){
             ViewGroup group = (ViewGroup) view;
             for (int i = 0; i < group.getChildCount(); i++) {
