@@ -1,11 +1,15 @@
 # NestedSelectionRadioGroup
 ## 可无限嵌套选择的RadioGroup，以及可以随意自定义布局的RadioButton
-NestedRadioGroup内部的控件选择状态完全跟随外部一起变化，可嵌套ViewGroup，可多行单选，而NestedRadioLayout是一个继承relativeLayout的RadioButton，这样你可以定义UI更丰富的RadioButton
+> github地址：https://github.com/LatoAndroid/NestedSelectionRadioGroup
+### 优势
+* **NestedSelectionRadioGroup**：可嵌套ViewGroup，可多层嵌套，可多行单选
+
+* **NestedRadioLayout**：继承RelativeLayout的RadioButton，这样你可以定义UI更丰富的RadioButton，更方便的是RadioButton的子控件也会完全跟随NestedRadioLayout的选中状态，不需要你做任何处理
 
 ### 项目来源
 之前在做一个需求的时候，产品经理要求在不同的列，不同的行的一些控件全部联动单选，而且每一个控件的样式都不一样，另外，在这些控件内部，子控件也要跟随变化。所以就有了这个库
 
-网上有很多类似的文章，但我看了几篇和几个github分享后，一是感觉不够全面（无法满足所有需求），二是引入的RadioGroup太老，后面懒得找了就自己实现了
+网上有很多类似的文章，但我看了几篇和几个github分享后，一是感觉不够全面（无法满足所有需求），二是引入的RadioGroup太老，三是都是在RadioButton上面做文章，我无法定义UI更丰富的RadioButton，所以后面懒得找了就自己实现了
 
 这个库的很大一部分代码来自RadioGroup、RadioButton和CompoundLayout，但是他们要不就是无法嵌套，要不就无法多行单选，所以在他的基础上进行了一些修改与适配
 
@@ -123,6 +127,8 @@ private void bindListener(final NestedRadioLayout compoundLayout) {
 > 我的简书：https://www.jianshu.com/u/bb187b559365
 
 > 我的掘金：https://juejin.im/user/58cd4b02128fe1006c8e8b81/posts
+
+> 我的github：https://github.com/LatoAndroid
 
 > 主要思路来自：https://github.com/Jaouan/CompoundLayout
 
