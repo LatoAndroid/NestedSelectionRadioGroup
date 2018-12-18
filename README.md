@@ -1,5 +1,5 @@
 # NestedSelectionRadioGroup
-## 可无限嵌套选择的RadioGroup，以及可以随意自定义布局的RadioButton
+## 可无限嵌套选择、可多行选择的RadioGroup，以及可以随意自定义布局的RadioButton
 > github地址：https://github.com/LatoAndroid/NestedSelectionRadioGroup
 ### 优势
 * **NestedSelectionRadioGroup**：可嵌套ViewGroup，可多层嵌套，可多行单选
