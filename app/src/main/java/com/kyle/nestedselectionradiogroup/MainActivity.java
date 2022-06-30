@@ -1,9 +1,8 @@
 package com.kyle.nestedselectionradiogroup;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 
 import com.kyle.radiogrouplib.BaseRadioLayout;
 import com.kyle.radiogrouplib.NestedRadioGroup;
